@@ -10,7 +10,8 @@
   },
   "plugins": [],
   "globals": {
-    "Config": true
+    "Config": false,
+    "SocketIO": false
   },
   "settings": {
     "ecamscript": 6

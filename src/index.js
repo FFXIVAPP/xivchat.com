@@ -141,6 +141,11 @@ module.exports = function (startServer = true) {
     });
 
     if (startServer) {
+      global.SocketIO = require('socket.io')(server.listener); // eslint-disable-line global-require
+      SocketIO.on('connection', (socket) => {
+        console.log(socket);
+      });
+
       server.start((err) => {
         if (err) {
           serverLog('debug', 'startError');
